@@ -1,0 +1,45 @@
+!SESSION 2023-01-25 04:26:12.473 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-01-25 04:26:41.723
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-01-25 04:26:41.848
+!MESSAGE Log4j initialized with config file C:\Users\mahon\stmBareMetal\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-01-25 04:26:48.686
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-01-25 04:31:20.292
+!MESSAGE Indexed 'HSiMeasurement' (3 sources, 53 headers) in 2.41 sec: 1,949 declarations; 2,832 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-01-25 04:32:16.719
+!MESSAGE Indexed 'HSiMeasurement' (3 sources, 53 headers) in 0.515 sec: 1,949 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-01-25 06:25:50.472
+!MESSAGE Indexed 'HSEMeasurement' (3 sources, 53 headers) in 0.935 sec: 1,949 declarations; 2,832 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-01-25 06:26:40.447
+!MESSAGE Indexed 'HSEMeasurement' (3 sources, 53 headers) in 0.302 sec: 1,949 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-01-25 07:19:50.677
+!MESSAGE Indexed 'systen' (19 sources, 81 headers) in 5.78 sec: 4,584 declarations; 20,547 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.008%)
+!SESSION 2023-01-28 06:52:32.484 -----------------------------------------------
+eclipse.buildId=Version 1.11.0
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-01-28 06:52:53.951
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-01-28 06:52:54.096
+!MESSAGE Log4j initialized with config file C:\Users\mahon\stmBareMetal\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-01-28 06:53:04.801
+!MESSAGE Started RMI Server, listening on port 41337

@@ -1,0 +1,30 @@
+07:26:01 **** Clean-only build of configuration Debug for project HSiMeasurement ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f429zitx.d ./Startup/startup_stm32f429zitx.o
+rm -rf ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf HSiMeasurement.elf HSiMeasurement.list HSiMeasurement.map default.size.stdout
+ 
+07:26:23 **** Build of configuration Debug for project HSiMeasurement ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f429zitx.d" -MT"Startup/startup_stm32f429zitx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f429zitx.o" "../Startup/startup_stm32f429zitx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "HSiMeasurement.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\HSiMeasurement\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HSiMeasurement.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HSiMeasurement.elf
+ 
+arm-none-eabi-size   HSiMeasurement.elf 
+arm-none-eabi-objdump -h -S  HSiMeasurement.elf  > "HSiMeasurement.list"
+   text	   data	    bss	    dec	    hex	filename
+    784	      8	   1568	   2360	    938	HSiMeasurement.elf
+Finished building: default.size.stdout
+ 
+Finished building: HSiMeasurement.list
+ 
+07:26:27 **** Incremental Build of configuration Debug for project HSiMeasurement ****
+make -j8 all 
+arm-none-eabi-size   HSiMeasurement.elf 
+   text	   data	    bss	    dec	    hex	filename
+    784	      8	   1568	   2360	    938	HSiMeasurement.elf
+Finished building: default.size.stdout
+ 
