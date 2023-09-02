@@ -1,0 +1,20 @@
+13:50:49 **** Build of configuration Debug for project SevenSegmentDisplay ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/clock.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/clock.d" -MT"Src/clock.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/clock.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "SevenSegmentDisplay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\SevenSegmentDisplay\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SevenSegmentDisplay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SevenSegmentDisplay.elf
+ 
+arm-none-eabi-size   SevenSegmentDisplay.elf 
+arm-none-eabi-objdump -h -S  SevenSegmentDisplay.elf  > "SevenSegmentDisplay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1176	     12	   1564	   2752	    ac0	SevenSegmentDisplay.elf
+Finished building: default.size.stdout
+ 
+Finished building: SevenSegmentDisplay.list
+ 
+
+13:50:55 Build Finished. 0 errors, 0 warnings. (took 5s.674ms)
+

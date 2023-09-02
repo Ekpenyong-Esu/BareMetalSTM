@@ -1,0 +1,17 @@
+20:32:22 **** Incremental Build of configuration Debug for project CaptureCompareModeTIM3RisingEdge ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "CaptureCompareModeTIM3RisingEdge.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\CaptureCompareModeTIM3RisingEdge\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CaptureCompareModeTIM3RisingEdge.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CaptureCompareModeTIM3RisingEdge.elf
+ 
+arm-none-eabi-size   CaptureCompareModeTIM3RisingEdge.elf 
+arm-none-eabi-objdump -h -S  CaptureCompareModeTIM3RisingEdge.elf  > "CaptureCompareModeTIM3RisingEdge.list"
+   text	   data	    bss	    dec	    hex	filename
+   1008	      8	   1568	   2584	    a18	CaptureCompareModeTIM3RisingEdge.elf
+Finished building: default.size.stdout
+ 
+Finished building: CaptureCompareModeTIM3RisingEdge.list
+ 
+
+20:32:24 Build Finished. 0 errors, 0 warnings. (took 2s.217ms)
+

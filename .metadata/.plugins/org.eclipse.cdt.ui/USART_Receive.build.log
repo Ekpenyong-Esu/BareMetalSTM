@@ -1,0 +1,10 @@
+11:41:01 **** Incremental Build of configuration Debug for project USART_Receive ****
+make -j8 all 
+arm-none-eabi-size   USART_Receive.elf 
+   text	   data	    bss	    dec	    hex	filename
+    932	      8	   1568	   2508	    9cc	USART_Receive.elf
+Finished building: default.size.stdout
+ 
+
+11:41:02 Build Finished. 0 errors, 0 warnings. (took 520ms)
+

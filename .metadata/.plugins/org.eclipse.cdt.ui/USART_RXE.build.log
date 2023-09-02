@@ -1,0 +1,16 @@
+12:17:14 **** Incremental Build of configuration Debug for project USART_RXE ****
+make -j8 all 
+arm-none-eabi-gcc -o "USART_RXE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\USART_RXE\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART_RXE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: USART_RXE.elf
+ 
+arm-none-eabi-size   USART_RXE.elf 
+arm-none-eabi-objdump -h -S  USART_RXE.elf  > "USART_RXE.list"
+   text	   data	    bss	    dec	    hex	filename
+   1048	      8	   1568	   2624	    a40	USART_RXE.elf
+Finished building: default.size.stdout
+ 
+Finished building: USART_RXE.list
+ 
+
+12:17:14 Build Finished. 0 errors, 0 warnings. (took 694ms)
+

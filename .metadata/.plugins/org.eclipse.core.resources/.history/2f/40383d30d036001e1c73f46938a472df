@@ -1,0 +1,108 @@
+#include "stm32f4xx.h"
+#include <stdio.h>
+
+#define MAX_STRING_LENGTH 50
+
+char receivedString[MAX_STRING_LENGTH];
+volatile uint8_t dataReceived = 0;
+volatile uint8_t stringIndex = 0;
+
+void UART1_Init(void) {
+
+	// Enable UART1 and GPIOA clocks
+	  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+	  RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
+
+	  RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN; // SYSCFG clock for interrupt
+
+	  // Configure PA9 and PA10 pins for UART1 TX and RX
+	  GPIOA->AFR[1] &= ~GPIO_AFRH_AFSEL9;
+	  GPIOA->AFR[1] |= 7 << GPIO_AFRH_AFSEL9_Pos; // ALT7 for UART1_TX
+
+	  GPIOA->AFR[1] &= ~GPIO_AFRH_AFSEL10;
+	  GPIOA->AFR[1] |= 7 << GPIO_AFRH_AFSEL10_Pos; // ALT7 for UART1_RX
+
+	  GPIOA->MODER &= ~(GPIO_MODER_MODER9 | GPIO_MODER_MODER10);
+	  GPIOA->MODER |= GPIO_MODER_MODER9_1 | GPIO_MODER_MODER10_1; // Enable alternate function
+
+	  // Configure UART1
+	  USART1->BRR = 16000000/9600; // 9600 baud @ 16MHz
+
+	  //  Enable RXNE interrupt and  Enable TXEIE interrupt
+
+
+
+	  USART1->CR1 = USART_CR1_TE | USART_CR1_RE  | USART_CR1_RXNEIE; // Enable TX, RX, UART
+
+
+	  USART1->CR2 = 0x0000; //USART_CR2_STOP_1 ; // 1 stop bit
+	  USART1->CR3 = 0x0000; // No flow control
+
+
+
+	  NVIC_SetPriority(USART1_IRQn, 2); // Highest priority
+	  NVIC_EnableIRQ(USART1_IRQn);
+	  USART1->CR1 |= USART_CR1_UE;
+}
+
+
+
+void USART1_Transmit(uint8_t data) {
+    while (!(USART1->SR & USART_SR_TXE)) {} // Wait until TXE flag is set
+    USART1->DR = data;
+}
+
+
+
+
+void USART1_TransmitString(const char *string) {
+    while (*string != '\0') {
+        USART1_Transmit(*string);
+        string++;
+    }
+}
+
+
+void USART1_IRQHandler(void) {
+    if (USART1->SR & USART_SR_RXNE) {
+        char receivedChar = USART1->DR;
+
+        if (receivedChar == '\r' || receivedChar == '\n') {
+            receivedString[stringIndex] = '\0'; // Null-terminate the received string
+            stringIndex = 0;
+            dataReceived = 1;
+        } else {
+            receivedString[stringIndex] = receivedChar;
+            stringIndex = (stringIndex + 1) % MAX_STRING_LENGTH;
+        }
+    }
+
+}
+
+
+
+void delayMs(int n) {
+	int i;
+	for (; n > 0; n--)
+		for (i = 0; i < 2000; i++);
+}
+
+
+int main(void) {
+    UART1_Init();
+
+    USART1_TransmitString("Transmitting Using USART:\n\r");
+    USART1_TransmitString("\n\r");
+    USART1_TransmitString("Enter some characters:\n\r");
+
+    while (1) {
+        if (dataReceived) {
+            USART1_TransmitString("Received: ");
+            for (uint8_t i = 0; receivedString[i] != '\0'; i++) {
+                USART1_Transmit(receivedString[i]);
+            }
+            USART1_TransmitString("\r\n");
+            dataReceived = 0;
+        }
+    }
+}

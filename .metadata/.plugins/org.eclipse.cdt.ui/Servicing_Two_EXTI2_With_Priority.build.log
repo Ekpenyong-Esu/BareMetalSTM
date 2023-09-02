@@ -1,0 +1,10 @@
+14:41:17 **** Incremental Build of configuration Debug for project Servicing_Two_EXTI2_With_Priority ****
+make -j8 all 
+arm-none-eabi-size   Servicing_Two_EXTI2_With_Priority.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1444	      8	   1568	   3020	    bcc	Servicing_Two_EXTI2_With_Priority.elf
+Finished building: default.size.stdout
+ 
+
+14:41:17 Build Finished. 0 errors, 0 warnings. (took 422ms)
+

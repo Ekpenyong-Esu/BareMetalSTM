@@ -1,0 +1,10 @@
+07:28:15 **** Incremental Build of configuration Debug for project Making_Delay_Using_Systicks ****
+make -j8 all 
+arm-none-eabi-size   Making_Delay_Using_Systicks.elf 
+   text	   data	    bss	    dec	    hex	filename
+    828	      8	   1568	   2404	    964	Making_Delay_Using_Systicks.elf
+Finished building: default.size.stdout
+ 
+
+07:28:16 Build Finished. 0 errors, 0 warnings. (took 805ms)
+

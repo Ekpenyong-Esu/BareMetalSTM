@@ -1,0 +1,17 @@
+07:05:46 **** Incremental Build of configuration Debug for project blinkLedBSS ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "blinkLedBSS.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\blinkLedBSS\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blinkLedBSS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: blinkLedBSS.elf
+ 
+arm-none-eabi-size   blinkLedBSS.elf 
+arm-none-eabi-objdump -h -S  blinkLedBSS.elf  > "blinkLedBSS.list"
+   text	   data	    bss	    dec	    hex	filename
+   1112	     12	   1564	   2688	    a80	blinkLedBSS.elf
+Finished building: default.size.stdout
+ 
+Finished building: blinkLedBSS.list
+ 
+
+07:05:48 Build Finished. 0 errors, 0 warnings. (took 2s.5ms)
+

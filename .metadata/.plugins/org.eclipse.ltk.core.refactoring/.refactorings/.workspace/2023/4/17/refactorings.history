@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LCD&apos; to &apos;LCD_8bit_delay&apos;" description="Rename resource &apos;LCD&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/LCD" name="LCD_8bit_delay" stamp="1682769915223" updateReferences="true"/>
+</session>

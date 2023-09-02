@@ -1,0 +1,59 @@
+#include "stm32f4xx.h"
+
+void USART5_Init(void);
+void USART5_SendChar(char ch);
+char USART5_ReceiveChar(void);
+void delayMs(int n);
+
+int main(void) {
+    char receivedChar;
+
+    USART5_Init(); // Initialize USART5
+
+    while (1) {
+        // Read character input from Tera Term
+        if (USART5->SR & USART_SR_RXNE) {
+            receivedChar = USART5_ReceiveChar();
+
+            // Echo back the received character
+            USART5_SendChar(receivedChar);
+        }
+    }
+}
+
+void USART5_Init(void) {
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN | RCC_AHB1ENR_GPIODEN;  // Enable GPIOC and GPIOD clocks
+    RCC->APB1ENR |= RCC_APB1ENR_UART5EN;  						// Enable USART5 clock
+
+    // Configure PC12 (USART5_TX) and PD2 (USART5_RX) as alternate function
+    GPIOC->MODER &= ~(GPIO_MODER_MODER12);
+    GPIOC->MODER |= GPIO_MODER_MODER12_1;
+    GPIOC->AFR[1] |= (8 << ((12 - 8) * 4));
+
+    GPIOD->MODER &= ~(GPIO_MODER_MODER2);
+    GPIOD->MODER |= GPIO_MODER_MODER2_1;
+    GPIOD->AFR[0] |= (8 << ((2 - 0) * 4));
+
+    USART5->BRR = 16000000 / 9600;  // Set baud rate to 9600
+    USART5->CR1 = USART_CR1_TE | USART_CR1_RE | USART_CR1_UE;  // Enable transmitter, receiver, and USART
+}
+
+void USART5_SendChar(char ch) {
+    while (!(USART5->SR & USART_SR_TXE));  // Wait until transmit data register is empty
+    USART5->DR = ch;  						// Write character to transmit data register
+}
+
+char USART5_ReceiveChar(void) {
+    while (!(USART5->SR & USART_SR_RXNE));  // Wait until data is received
+    return USART5->DR;  					// Read received data from data register
+}
+
+
+void delayMs(int n) {
+	int i;
+	for (; n > 0; n--)
+		for (i = 0; i < 2000; i++);
+}
+
+
+

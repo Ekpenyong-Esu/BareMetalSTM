@@ -1,0 +1,5 @@
+1687262312176	Delete resource 'USART_USING_IO1'
+1687265807976	Delete resource 'USART_USING_IO/Debug/USART_USING_IO.elf'
+1687265824678	Delete resource 'Systick_With_LED/Debug/blinkLed.elf'
+1687269402101	Delete resource 'Systick_To_Toggle_LED_5_TTimes_In _A_Second/Debug/Systick_With_LED.elf'
+1687270456926	Delete resource 'Making_Delay_Using_Systicks/Debug/Systick_With_LED.elf'

@@ -1,0 +1,17 @@
+13:28:44 **** Incremental Build of configuration Debug for project USART_With_Iterrupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "USART_With_Iterrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\USART_With_Iterrupt\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART_With_Iterrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: USART_With_Iterrupt.elf
+ 
+arm-none-eabi-size   USART_With_Iterrupt.elf 
+arm-none-eabi-objdump -h -S  USART_With_Iterrupt.elf  > "USART_With_Iterrupt.list"
+   text	   data	    bss	    dec	    hex	filename
+   1488	      8	   2568	   4064	    fe0	USART_With_Iterrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: USART_With_Iterrupt.list
+ 
+
+13:28:46 Build Finished. 0 errors, 0 warnings. (took 1s.707ms)
+

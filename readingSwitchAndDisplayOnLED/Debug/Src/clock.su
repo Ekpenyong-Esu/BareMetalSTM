@@ -1,0 +1,5 @@
+C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include/core_cm4.h:1724:22:__NVIC_DisableIRQ	16	static,ignoring_inline_asm
+../Src/clock.c:14:6:delayMs1	24	static
+../Src/clock.c:22:6:delayMs	16	static
+../Src/clock.c:52:6:TIM2_IRQHandler	4	static

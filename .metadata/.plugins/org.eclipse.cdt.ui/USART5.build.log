@@ -1,0 +1,17 @@
+07:38:18 **** Build of configuration Debug for project USART5 ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "USART5.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\USART5\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART5.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: USART5.elf
+ 
+arm-none-eabi-size   USART5.elf 
+arm-none-eabi-objdump -h -S  USART5.elf  > "USART5.list"
+   text	   data	    bss	    dec	    hex	filename
+   1044	      8	   1568	   2620	    a3c	USART5.elf
+Finished building: default.size.stdout
+ 
+Finished building: USART5.list
+ 
+
+07:38:20 Build Finished. 0 errors, 0 warnings. (took 1s.331ms)
+

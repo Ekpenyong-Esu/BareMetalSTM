@@ -1,0 +1,5 @@
+../USART/USART.c:4:6:UART1_Init	4	static
+../USART/USART.c:29:6:UART1_SendChar	16	static
+../USART/USART.c:35:6:UART1_ReceiveChar	4	static
+../USART/USART.c:41:6:UART1_SendString	24	static
+../USART/USART.c:48:6:UART1_ReceiveString	24	static

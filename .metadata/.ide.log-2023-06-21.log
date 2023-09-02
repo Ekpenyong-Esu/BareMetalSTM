@@ -1,0 +1,20 @@
+2023-06-21 07:26:27,533 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:26:27,562 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:26:27,566 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:26:28,628 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:26:28,632 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:26:28,637 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:27:02,303 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:27:02,306 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:27:02,309 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:27:29,318 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:27:29,321 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:27:29,324 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connection refused: connect
+2023-06-21 07:27:59,172 [INFO] Activator:176 - 
+
+
+2023-06-21 07:27:59,177 [INFO] Activator:177 - !SESSION log4j initialized
+2023-06-21 07:28:12,622 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-06-21 07:28:37,194 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-06-21 07:28:37,196 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-06-21 07:28:37,200 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.

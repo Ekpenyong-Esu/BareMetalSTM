@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;STM32F429xxx_Drivers/Src/main.c&apos; to &apos;001LED.c&apos;" description="Rename resource &apos;main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/main.c" name="001LED.c" stamp="1676736333156" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;STM32F429xxx_Drivers/Src/002SWITCH_BUTTON_EXT.c&apos; to &apos;003SWITCH_BUTTON_EXT.c&apos;" description="Rename resource &apos;002SWITCH_BUTTON_EXT.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/002SWITCH_BUTTON_EXT.c" name="003SWITCH_BUTTON_EXT.c" stamp="1676738659803" updateReferences="true"/>
+</session>

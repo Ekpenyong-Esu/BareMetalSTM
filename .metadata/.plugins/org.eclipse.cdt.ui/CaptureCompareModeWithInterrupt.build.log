@@ -1,0 +1,10 @@
+20:30:22 **** Incremental Build of configuration Debug for project CaptureCompareModeWithInterrupt ****
+make -j8 all 
+arm-none-eabi-size   CaptureCompareModeWithInterrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1232	      8	   1568	   2808	    af8	CaptureCompareModeWithInterrupt.elf
+Finished building: default.size.stdout
+ 
+
+20:30:23 Build Finished. 0 errors, 0 warnings. (took 622ms)
+

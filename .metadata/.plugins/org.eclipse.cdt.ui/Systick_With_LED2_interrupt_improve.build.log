@@ -1,0 +1,16 @@
+13:57:02 **** Incremental Build of configuration Debug for project Systick_With_LED2_interrupt_improve ****
+make -j8 all 
+arm-none-eabi-gcc -o "Systick_With_LED2_interrupt_improve.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\Systick_With_LED2_interrupt_improve\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Systick_With_LED2_interrupt_improve.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Systick_With_LED2_interrupt_improve.elf
+ 
+arm-none-eabi-size   Systick_With_LED2_interrupt_improve.elf 
+arm-none-eabi-objdump -h -S  Systick_With_LED2_interrupt_improve.elf  > "Systick_With_LED2_interrupt_improve.list"
+   text	   data	    bss	    dec	    hex	filename
+    848	      8	   1568	   2424	    978	Systick_With_LED2_interrupt_improve.elf
+Finished building: default.size.stdout
+ 
+Finished building: Systick_With_LED2_interrupt_improve.list
+ 
+
+13:57:02 Build Finished. 0 errors, 0 warnings. (took 688ms)
+

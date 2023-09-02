@@ -1,0 +1,16 @@
+14:56:55 **** Incremental Build of configuration Debug for project USART_USING_IO ****
+make -j8 all 
+arm-none-eabi-gcc -o "USART_USING_IO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\USART_USING_IO\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART_USING_IO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: USART_USING_IO.elf
+ 
+arm-none-eabi-size   USART_USING_IO.elf 
+arm-none-eabi-objdump -h -S  USART_USING_IO.elf  > "USART_USING_IO.list"
+   text	   data	    bss	    dec	    hex	filename
+  10488	    108	   1588	  12184	   2f98	USART_USING_IO.elf
+Finished building: default.size.stdout
+ 
+Finished building: USART_USING_IO.list
+ 
+
+14:56:56 Build Finished. 0 errors, 0 warnings. (took 705ms)
+

@@ -1,0 +1,10 @@
+13:55:38 **** Clean-only build of configuration Debug for project STM32F429xxx_Drivers ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f429zitx.d ./Startup/startup_stm32f429zitx.o
+rm -rf ./Src/001LED.d ./Src/001LED.o ./Src/001LED.su
+rm -rf ./Drivers/Src/STM32F429xx_Gpio_Drivers.d ./Drivers/Src/STM32F429xx_Gpio_Drivers.o ./Drivers/Src/STM32F429xx_Gpio_Drivers.su
+rm -rf STM32F429xxx_Drivers.elf STM32F429xxx_Drivers.list STM32F429xxx_Drivers.map default.size.stdout
+ 
+
+13:55:39 Build Finished. 0 errors, 0 warnings. (took 529ms)
+

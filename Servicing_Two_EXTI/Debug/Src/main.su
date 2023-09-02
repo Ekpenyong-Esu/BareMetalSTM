@@ -1,0 +1,8 @@
+C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include/core_cm4.h:1816:22:__NVIC_SetPriority	16	static
+../Src/main.c:27:5:main	8	static
+../Src/main.c:55:6:delayMs	24	static
+../Src/main.c:62:6:EXTI0_IRQHandler	8	static
+../Src/main.c:81:6:EXTI15_10_IRQHandler	8	static
+../Src/main.c:104:6:GPIOA_PA0_Interrupt_SetUp	8	static
+../Src/main.c:135:6:GPIOB_PB10_Interrupt_SetUp	8	static

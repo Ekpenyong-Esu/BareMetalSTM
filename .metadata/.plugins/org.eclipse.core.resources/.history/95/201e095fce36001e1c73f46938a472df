@@ -1,0 +1,53 @@
+// STM32F429 Discovery board
+
+#include "stm32f4xx.h"
+
+#define BUFFER_SIZE 32
+
+char buffer[BUFFER_SIZE];
+volatile uint16_t bufferPos = 0;
+
+void USART1_Init(void) {
+
+  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN; // Enable GPIOA clock
+  RCC->APB2ENR |= RCC_APB2ENR_USART1EN; // Enable USART1 clock
+
+  // PA9 - USART1 TX, PA10 - USART1 RX
+  GPIOA->MODER |= GPIO_MODER_MODER9_1;
+  GPIOA->MODER |= GPIO_MODER_MODER10_1;
+
+  GPIOA->AFR[1] |= GPIO_AFRH_AFSEL9; // PA9 to AF7 (USART1_TX)
+  GPIOA->AFR[1] |= GPIO_AFRH_AFSEL10; // PA10 to AF7 (USART1_RX)
+
+  USART1->BRR = 168000000/115200; // 115200 baud @ 168MHz
+
+  // Enable RXNE interrupt
+  USART1->CR1 |= USART_CR1_RXNEIE;
+
+  // Enable USART1 interrupt
+  NVIC_EnableIRQ(USART1_IRQn);  // Enable USART1 interrupt
+
+  USART1->CR1 |= USART_CR1_TE | USART_CR1_RE |USART_CR1_UE; // Enable USART1
+}
+
+void USART1_IRQHandler(void) {
+
+  if(USART1->SR & USART_SR_RXNE) { // Data received
+
+    char c = USART1->DR;
+    buffer[bufferPos++] = c; // Store data in buffer
+    bufferPos %= BUFFER_SIZE; // Handle wrap-around
+
+    // Echo back data
+    USART1->DR = c;
+
+  }
+}
+
+int main(void) {
+
+  USART1_Init();
+
+  while(1);
+
+}

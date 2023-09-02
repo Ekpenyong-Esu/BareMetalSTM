@@ -1,0 +1,5 @@
+USART.c:4:6:UART1_Init	1
+USART.c:29:6:UART1_SendChar	2
+USART.c:35:6:UART1_ReceiveChar	2
+USART.c:41:6:UART1_SendString	2
+USART.c:48:6:UART1_ReceiveString	3
