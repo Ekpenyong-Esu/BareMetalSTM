@@ -59,8 +59,8 @@ all: main-build
 main-build: ADC_INPUT_CHANNEl.elf secondary-outputs
 
 # Tool invocations
-ADC_INPUT_CHANNEl.elf ADC_INPUT_CHANNEl.map: $(OBJS) $(USER_OBJS) C:\Users\mahon\stmBareMetal\BareMetalSTM\ADC_INPUT_CHANNEl\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ADC_INPUT_CHANNEl.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\ADC_INPUT_CHANNEl\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_INPUT_CHANNEl.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ADC_INPUT_CHANNEl.elf ADC_INPUT_CHANNEl.map: $(OBJS) $(USER_OBJS) C:\Users\mahon\Embedded_workstation\BareMetalSTM\ADC_INPUT_CHANNEl\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ADC_INPUT_CHANNEl.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\mahon\Embedded_workstation\BareMetalSTM\ADC_INPUT_CHANNEl\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_INPUT_CHANNEl.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

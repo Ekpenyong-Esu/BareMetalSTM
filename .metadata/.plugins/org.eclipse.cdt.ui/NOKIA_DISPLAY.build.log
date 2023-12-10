@@ -1,0 +1,10 @@
+12:24:56 **** Incremental Build of configuration Debug for project NOKIA_DISPLAY ****
+make -j8 all 
+arm-none-eabi-size   NOKIA_DISPLAY.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1320	      8	   1568	   2896	    b50	NOKIA_DISPLAY.elf
+Finished building: default.size.stdout
+ 
+
+12:24:57 Build Finished. 0 errors, 0 warnings. (took 923ms)
+

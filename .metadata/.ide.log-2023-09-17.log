@@ -1,0 +1,8 @@
+2023-09-17 06:53:56,532 [INFO] Activator:176 - 
+
+
+2023-09-17 06:53:56,546 [INFO] Activator:177 - !SESSION log4j initialized
+2023-09-17 06:54:09,369 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-09-17 06:54:41,915 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-09-17 06:54:41,918 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-09-17 06:54:41,922 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.

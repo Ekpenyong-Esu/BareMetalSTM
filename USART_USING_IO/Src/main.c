@@ -60,7 +60,9 @@ void USART1_Init(void) {
 
     // Configure USART1: 9600 baud, 8 data bits, 1 stop bit, no parity, transmit enable, USART enable
     USART1->BRR = (16000000 / 9600);
+
     USART1->CR1 |= USART_CR1_RE | USART_CR1_TE | USART_CR1_RXNEIE;
+
     USART1->CR1 |= USART_CR1_UE;
     NVIC_EnableIRQ(USART1_IRQn);
 }

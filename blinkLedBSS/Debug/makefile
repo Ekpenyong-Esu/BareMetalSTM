@@ -59,8 +59,8 @@ all: main-build
 main-build: blinkLedBSS.elf secondary-outputs
 
 # Tool invocations
-blinkLedBSS.elf blinkLedBSS.map: $(OBJS) $(USER_OBJS) C:\Users\mahon\stmBareMetal\BareMetalSTM\blinkLedBSS\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "blinkLedBSS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\blinkLedBSS\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blinkLedBSS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+blinkLedBSS.elf blinkLedBSS.map: $(OBJS) $(USER_OBJS) C:\Users\mahon\Embedded_workstation\BareMetalSTM\blinkLedBSS\STM32F429ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "blinkLedBSS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\mahon\Embedded_workstation\BareMetalSTM\blinkLedBSS\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blinkLedBSS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

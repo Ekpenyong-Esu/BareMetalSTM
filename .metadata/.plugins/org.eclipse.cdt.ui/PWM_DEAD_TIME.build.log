@@ -1,0 +1,20 @@
+10:40:45 **** Incremental Build of configuration Debug for project PWM_DEAD_TIME ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f429zitx.d" -MT"Startup/startup_stm32f429zitx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f429zitx.o" "../Startup/startup_stm32f429zitx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/Embedded_workstation/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/Embedded_workstation/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/Embedded_workstation/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/Embedded_workstation/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/Embedded_workstation/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/Embedded_workstation/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "PWM_DEAD_TIME.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\Embedded_workstation\BareMetalSTM\PWM_DEAD_TIME\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_DEAD_TIME.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_DEAD_TIME.elf
+ 
+arm-none-eabi-size   PWM_DEAD_TIME.elf 
+arm-none-eabi-objdump -h -S  PWM_DEAD_TIME.elf  > "PWM_DEAD_TIME.list"
+   text	   data	    bss	    dec	    hex	filename
+    892	      8	   1568	   2468	    9a4	PWM_DEAD_TIME.elf
+Finished building: default.size.stdout
+ 
+Finished building: PWM_DEAD_TIME.list
+ 
+
+10:40:46 Build Finished. 0 errors, 0 warnings. (took 1s.213ms)
+

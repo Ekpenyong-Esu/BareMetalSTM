@@ -1,0 +1,4 @@
+main.c:7:6:I2C_Init	1
+main.c:60:6:I2C_Write	6
+main.c:93:9:I2C_Read	8
+main.c:145:5:main	1

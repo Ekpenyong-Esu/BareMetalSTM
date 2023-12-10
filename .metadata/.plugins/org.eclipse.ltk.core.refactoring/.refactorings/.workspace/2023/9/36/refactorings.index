@@ -1,0 +1,5 @@
+1694271429884	Delete resource 'Sensing_External_Temp/Debug/ADC_STM_TEMP.elf'
+1694276798922	Delete resource 'Sensing_External_Temp/ADC_INPUT_CHANNEl.launch'
+1694276801850	Delete resource 'Sensing_External_Temp/ADC_STM_TEMP.launch'
+1694277037114	Rename resource 'Sensing_External_Temp'
+1694277072356	Rename resource 'ADC_STM_TEMP'

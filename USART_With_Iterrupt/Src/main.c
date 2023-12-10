@@ -117,7 +117,7 @@ int main(void) {
     	{
 
 
-    		USART1_TransmitString("\n\r");
+    		USART1_TransmitString("\r\n");
     		USART1_TransmitString("Received: ");
     		USART1_TransmitString(rx_buffer);
     		USART1_TransmitString("\r\n");
@@ -129,7 +129,7 @@ int main(void) {
 
     	USART1_TransmitString("Enter some characters:  ");
     	delayMs(5000);
-    	USART1_TransmitString("\n\r");
+    	USART1_TransmitString("\r\n");
 
     }
 }

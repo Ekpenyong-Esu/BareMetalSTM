@@ -1,0 +1,65 @@
+#include <math.h>
+
+#include "stm32f4xx.h"
+
+// Lookup table size
+#define TABLE_SIZE 256
+
+// DAC resolution
+#define DAC_RES 12
+
+// Lookup table
+uint16_t sine_table[TABLE_SIZE];
+
+// Generate lookup table
+void generate_sine_table() {
+  for(int i=0; i<TABLE_SIZE; i++) {
+	  //M_PIi/TABLE_SIZE - Calculates the angle in radians for each sample point
+	  //2047 * sin(angle) - Scales the sine value to fit the range of a 12-bit DAC (0-4095).
+	  //2047 is half of the full scale range. This centers the output at midscale.
+    sine_table[i] = (uint16_t)(2047 * sin(2*M_PI*i/TABLE_SIZE));  // from 0 to TABLE_SIZE-1, this will sweep the
+    															// full 0 to 2π range.
+  }
+}
+
+// Initialize DAC
+void init_dac() {
+  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+  GPIOA->MODER |= (3 << 2*4); // PA4 to analog mode
+
+  RCC->APB1ENR |= RCC_APB1ENR_DACEN;
+
+  DAC->CR |= DAC_CR_EN1; // Enable DAC1
+  DAC->DHR12R1 = 0; // Init to 0V
+}
+
+// Main loop
+int main() {
+
+  // Initialize sine table
+  generate_sine_table();
+
+  // Initialize DAC
+  init_dac();
+
+  // Loop forever
+  while(1) {
+
+	  static uint16_t index = 0;
+	  index = (index + 1) % TABLE_SIZE;
+      DAC->DHR12R1 = sine_table[index]; // Output value
+      for(int j=0; j<10; j++); // Delay
+
+
+  }
+
+}
+
+/* 16 MHz SYSCLK */
+void delayMs(int n) {
+    int i;
+    for (; n > 0; n--)
+        for (i = 0; i < 3195; i++) ;
+}
+
+

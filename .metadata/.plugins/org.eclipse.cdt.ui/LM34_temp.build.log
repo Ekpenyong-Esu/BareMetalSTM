@@ -1,0 +1,10 @@
+18:34:34 **** Incremental Build of configuration Debug for project LM34_temp ****
+make -j8 all 
+arm-none-eabi-size   LM34_temp.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16228	    472	   1584	  18284	   476c	LM34_temp.elf
+Finished building: default.size.stdout
+ 
+
+18:34:35 Build Finished. 0 errors, 0 warnings. (took 403ms)
+

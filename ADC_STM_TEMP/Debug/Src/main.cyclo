@@ -1,8 +1,0 @@
-main.c:22:5:main	2
-main.c:60:6:delayMs	3
-main.c:70:6:TIM2_INIT	1
-main.c:100:6:USART1_Init	1
-main.c:119:5:USART1_WriteChar	2
-main.c:129:5:USART1_WriteString	3
-main.c:140:6:ADC1_Init	1
-main.c:164:5:_write	2

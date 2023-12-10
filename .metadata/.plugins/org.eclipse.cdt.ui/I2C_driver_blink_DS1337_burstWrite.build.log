@@ -1,0 +1,17 @@
+14:11:23 **** Incremental Build of configuration Debug for project I2C_driver_blink_DS1337_burstWrite ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/stmBareMetal/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "I2C_driver_blink_DS1337_burstWrite.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\stmBareMetal\BareMetalSTM\I2C_driver_blink_DS1337_burstWrite\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_driver_blink_DS1337_burstWrite.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: I2C_driver_blink_DS1337_burstWrite.elf
+ 
+arm-none-eabi-size   I2C_driver_blink_DS1337_burstWrite.elf 
+arm-none-eabi-objdump -h -S  I2C_driver_blink_DS1337_burstWrite.elf  > "I2C_driver_blink_DS1337_burstWrite.list"
+   text	   data	    bss	    dec	    hex	filename
+  15832	    472	   1584	  17888	   45e0	I2C_driver_blink_DS1337_burstWrite.elf
+Finished building: default.size.stdout
+ 
+Finished building: I2C_driver_blink_DS1337_burstWrite.list
+ 
+
+14:11:24 Build Finished. 0 errors, 0 warnings. (took 1s.297ms)
+

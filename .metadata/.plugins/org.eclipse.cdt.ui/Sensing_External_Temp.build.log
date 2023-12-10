@@ -1,0 +1,10 @@
+18:28:41 **** Incremental Build of configuration Debug for project Sensing_External_Temp ****
+make -j8 all 
+arm-none-eabi-size   Sensing_External_Temp.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16412	    472	   1584	  18468	   4824	Sensing_External_Temp.elf
+Finished building: default.size.stdout
+ 
+
+18:28:42 Build Finished. 0 errors, 0 warnings. (took 1s.137ms)
+

@@ -1,0 +1,17 @@
+10:46:42 **** Incremental Build of configuration Debug for project PWM_CENTRE_ALIGN ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/mahon/Embedded_workstation/BareMetalSTM/Drivers/Device/ST/STM32F4xx/Include" -I"C:/Users/mahon/Embedded_workstation/BareMetalSTM/Drivers/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "PWM_CENTRE_ALIGN.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mahon\Embedded_workstation\BareMetalSTM\PWM_CENTRE_ALIGN\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_CENTRE_ALIGN.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_CENTRE_ALIGN.elf
+ 
+arm-none-eabi-size   PWM_CENTRE_ALIGN.elf 
+arm-none-eabi-objdump -h -S  PWM_CENTRE_ALIGN.elf  > "PWM_CENTRE_ALIGN.list"
+   text	   data	    bss	    dec	    hex	filename
+    992	      8	   1568	   2568	    a08	PWM_CENTRE_ALIGN.elf
+Finished building: default.size.stdout
+ 
+Finished building: PWM_CENTRE_ALIGN.list
+ 
+
+10:46:44 Build Finished. 0 errors, 0 warnings. (took 1s.712ms)
+
